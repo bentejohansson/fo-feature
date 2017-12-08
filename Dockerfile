@@ -6,4 +6,5 @@ RUN cd /env.in && find . -type f -exec sh -c 'jq . < {} > /env.out/{}' \;
 
 # Deploy environment files to an nginx container.
 FROM nginx
-COPY --from=0 /env.out/ /usr/share/nginx/html
+COPY --from=0 /env.out/ /www/_environments/
+COPY nginx.conf /etc/nginx/conf.d/default.conf
