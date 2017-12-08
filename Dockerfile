@@ -1,6 +1,9 @@
+# Validate JSON files and write sanitized output to /env.in/
 FROM realguess/jq
-COPY test.json .
-RUN jq . < test.json
+COPY environments /env.in
+RUN mkdir /env.out
+RUN cd /env.in && find . -type f -exec sh -c 'jq . < {} > /env.out/{}' \;
 
+# Deploy environment files to an nginx container.
 FROM nginx
-COPY --from=0 test.json .
+COPY --from=0 /env.out/ /usr/share/nginx/html
