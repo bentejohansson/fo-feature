@@ -1,0 +1,10 @@
+# vi: se sw=2 sts=2 ts=2 et:
+image: docker.adeo.no:5000/fo/feature
+replicas:
+  min: 2
+  max: 2
+port: 80
+fasitResources:
+  used:
+    - alias: fo-feature
+      resourceType: ApplicationProperties
