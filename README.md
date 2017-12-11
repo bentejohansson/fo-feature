@@ -16,5 +16,5 @@ Commit and push to see your changes deployed.
 Build and deploy the Docker container. The API is available on port 80 inside
 the container, and is available at the URI `/fo-feature`.
 
-The environment is configured automatically by NAIS, using the environment
-variable `FO_FEATURE_ENVIRONMENT`.
+The environment is configured automatically by NAIS, injected into the Docker
+container at deploy time using the environment variable `ENVIRONMENT`.
