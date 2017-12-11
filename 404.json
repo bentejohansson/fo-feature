@@ -1,0 +1,4 @@
+{
+    "error": "404 Not Found!",
+    "message": "This is probably due to the ENVIRONMENT variable being set to '${ENVIRONMENT}', but there is no '${ENVIRONMENT}.json' file in the environments/ directory."
+}
