@@ -2,13 +2,12 @@
 FROM realguess/jq
 COPY environments /env.in
 RUN mkdir /env.out
-RUN cd /env.in && find . -type f -exec sh -c 'jq . < {} > /env.out/{}' \;
+RUN cd /env.in && set -e && for file in *.json; do jq . < $file > /env.out/$file; done
 
 # Deploy environment files to an nginx container.
 FROM nginx
-ENV ENVIRONMENT hello_world
+ENV ENVIRONMENT default
 COPY --from=0 /env.out/ /www/_environments/
-COPY 404.json /404.json.template
 COPY nginx.conf /nginx.conf.template
 COPY entrypoint.sh /entrypoint
 ENTRYPOINT ["/entrypoint"]

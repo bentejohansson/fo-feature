@@ -1,5 +1,5 @@
 #!/bin/bash -e
 
 envsubst < /nginx.conf.template > /etc/nginx/conf.d/default.conf
-envsubst < /404.json.template > /www/404.json
+envsubst < /www/_environments/404.template.json > /www/_environments/404.json
 exec "$@"
