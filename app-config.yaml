@@ -4,7 +4,3 @@ replicas:
   min: 2
   max: 2
 port: 80
-fasitResources:
-  used:
-    - alias: fo-feature
-      resourceType: ApplicationProperties
