@@ -100,6 +100,9 @@ def main():
             if prev is not None:
                 compare_structure(prev, tree)
             prev = tree
+        except StructuralIntegrityException as e:
+            print('%s: structure not equal to previous file: %s' % (f, str(e)))
+            errors += 1
         except Exception as e:
             print('%s: error: %s' % (f, str(e)))
             errors += 1
