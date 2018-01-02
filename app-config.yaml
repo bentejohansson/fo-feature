@@ -8,3 +8,7 @@ fasitResources:
   used:
     - alias: fo-feature
       resourceType: ApplicationProperties
+  exposed:
+  - alias: feature_endpoint
+    resourceType: restservice
+    path: /fo-feature
