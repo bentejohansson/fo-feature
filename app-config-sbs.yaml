@@ -11,4 +11,4 @@ fasitResources:
   exposed:
   - alias: feature_endpoint_sbs
     resourceType: restservice
-    path: /fo-feature
+    path: /feature
