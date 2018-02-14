@@ -17,4 +17,4 @@ Build and deploy the Docker container. The API is available on port 80 inside
 the container, and is available at the URI `/feature`.
 
 The environment is configured automatically by NAIS, injected into the Docker
-container at deploy time using the environment variable `ENVIRONMENT`.
+container at deploy time using the environment variable `FASIT_ENVIRONMENT_NAME`.

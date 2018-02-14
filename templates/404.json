@@ -1,5 +1,5 @@
 {
     "error": "404 Not Found",
-    "message": "ENVIRONMENT is set to '${ENVIRONMENT}', but there is no '${ENVIRONMENT}.json' file in the environments/ directory. If ENVIRONMENT is 'default', it might indicate that you forgot to add the correct environment in Fasit."
+    "message": "FASIT_ENVIRONMENT_NAME is set to '${FASIT_ENVIRONMENT_NAME}', but there is no '${FASIT_ENVIRONMENT_NAME}.json' file in the environments/ directory. If FASIT_ENVIRONMENT_NAME is 'default', it might indicate that you forgot to add the correct environment in Fasit."
 }
 

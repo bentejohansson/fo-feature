@@ -6,7 +6,7 @@ RUN python3 /check.py /env/*.json
 
 # Deploy environment files to an nginx container.
 FROM nginx
-ENV ENVIRONMENT default
+ENV FASIT_ENVIRONMENT_NAME default
 COPY environments /www/_environments/
 COPY templates /templates/
 COPY entrypoint.sh /entrypoint
