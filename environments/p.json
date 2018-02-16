@@ -9,5 +9,11 @@
   },
   "veilarboppfolging": {
     "unngasjekkpagaendeytelser": false
+  },
+  "veilarboppfolging": {
+    "registreringgenerell": false
+  },
+  "veilarboppfolging": {
+    "registreringarena": false
   }
 }
