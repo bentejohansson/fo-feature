@@ -1,8 +1,13 @@
 {
   "aktivitetsplan": {
-    "kvp": false
+    "kvp": false,
+    "unngasjekkpagaendeytelser": true
   },
   "veilarbaktivitetsplanfs": {
-    "kvp": true
+    "kvp": true,
+    "unngasjekkpagaendeytelser": true
+  },
+  "veilarboppfolging": {
+    "unngasjekkpagaendeytelser": true
   }
 }
