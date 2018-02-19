@@ -8,12 +8,8 @@
     "unngasjekkpagaendeytelser": false
   },
   "veilarboppfolging": {
-    "unngasjekkpagaendeytelser": false
-  },
-  "veilarboppfolging": {
-    "registreringgenerell": false
-  },
-  "veilarboppfolging": {
-    "registreringarena": false
+    "unngasjekkpagaendeytelser": false,
+    "registrering": false,
+    "opprettbrukeriarena": false
   }
 }
