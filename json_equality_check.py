@@ -61,13 +61,39 @@ def check_types(tree):
     except ValidationException as e:
         raise ValidationException("in root node '%s': %s" % (k, str(e)))
 
+def dict_raise_on_duplicates(ordered_pairs):
+    """
+    Reject duplicate keys in a JSON tree.
+
+    https://stackoverflow.com/questions/14902299/json-loads-allows-duplicate-keys-in-a-dictionary-overwriting-the-first-value
+
+    The RFC 4627 for application/json media type recommends unique keys but it
+    doesn't forbid them explicitly:
+
+        The names within an object SHOULD be unique.
+
+    From RFC 2119:
+
+        SHOULD This word, or the adjective "RECOMMENDED", mean that there may
+        exist valid reasons in particular circumstances to ignore a particular
+        item, but the full implications must be understood and carefully
+        weighed before choosing a different course.
+    """
+    d = {}
+    for k, v in ordered_pairs:
+        if k in d:
+           raise ValueError("duplicate key: %r" % (k,))
+        else:
+           d[k] = v
+    return d
+
 def dict_from_json_file(filename):
     """
     Read a JSON structure from a file and return it as a dictionary object.
     """
     with open(filename, 'r') as f:
         jsobject = f.read()
-        return json.loads(jsobject)
+        return json.loads(jsobject, object_pairs_hook=dict_raise_on_duplicates)
 
 def compare_structure(a, b):
     """
