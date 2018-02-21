@@ -9,7 +9,7 @@
   },
   "veilarboppfolging": {
     "unngasjekkpagaendeytelser": true,
-    "registrering": false,
-    "opprettbrukeriarena": false
+    "registrering": true,
+    "opprettbrukeriarena": true
   }
 }
