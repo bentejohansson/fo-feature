@@ -5,10 +5,10 @@
   },
   "veilarbaktivitetsplanfs": {
     "kvp": true,
-    "unngasjekkpagaendeytelser": false
+    "unngasjekkpagaendeytelser": true
   },
   "veilarboppfolging": {
-    "unngasjekkpagaendeytelser": false,
+    "unngasjekkpagaendeytelser": true,
     "registrering": false,
     "opprettbrukeriarena": false
   }
